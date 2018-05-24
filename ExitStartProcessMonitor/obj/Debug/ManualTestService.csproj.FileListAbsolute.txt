@@ -1,0 +1,7 @@
+C:\devwork\c#\ManualTestService\ManualTestService\bin\Debug\ManualTestService.exe.config
+C:\devwork\c#\ManualTestService\ManualTestService\bin\Debug\ManualTestService.exe
+C:\devwork\c#\ManualTestService\ManualTestService\bin\Debug\ManualTestService.pdb
+C:\devwork\c#\ManualTestService\ManualTestService\obj\Debug\ManualTestService.csprojResolveAssemblyReference.cache
+C:\devwork\c#\ManualTestService\ManualTestService\obj\Debug\ManualTestService.csproj.CoreCompileInputs.cache
+C:\devwork\c#\ManualTestService\ManualTestService\obj\Debug\ManualTestService.exe
+C:\devwork\c#\ManualTestService\ManualTestService\obj\Debug\ManualTestService.pdb
