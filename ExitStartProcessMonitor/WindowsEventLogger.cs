@@ -10,8 +10,8 @@ namespace ExitStartProcessMonitor
     public class WindowsEventLogger
     {
         private readonly EventLog _eventLog;
-        private const string EventSourceName = "TestServiceSource";
-        private const string EventLogName = "TestServiceLog";
+        private const string EventSourceName = "ExitStartProcessMonitor";
+        private const string EventLogName = "ExitStartProcessMonitor";
 
         public WindowsEventLogger(EventLog eventLog = null)
         {
