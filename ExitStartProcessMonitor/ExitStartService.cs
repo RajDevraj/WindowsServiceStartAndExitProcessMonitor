@@ -17,12 +17,20 @@ namespace ExitStartProcessMonitor
 
         protected override void OnStart(string[] arguments)
         {
-            _processMonitor.MonitorProcessExit((sender, args) => {_logger.WriteToLog("Process Exited");});
+            _processMonitor.MonitorProcessExit(ExitEventHandler);
         }
 
         protected override void OnStop()
         {
             _logger.WriteToLog("Service closed");
+        }
+
+        private void ExitEventHandler(object sender, EventArgs args)
+        {
+            if (Process.GetProcessesByName("Code").Length == 0)
+            {
+
+            }
         }
     }
 }
