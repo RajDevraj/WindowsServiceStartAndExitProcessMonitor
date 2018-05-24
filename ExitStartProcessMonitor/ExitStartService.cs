@@ -17,8 +17,7 @@ namespace ExitStartProcessMonitor
 
         protected override void OnStart(string[] arguments)
         {
-            _processMonitor.MonitorProcessStart((sender, args) => _logger.WriteToLog("Process Started"));
-            _processMonitor.MonitorProcessExit((sender, args) => _logger.WriteToLog("Process Started"));
+            _processMonitor.MonitorProcessExit((sender, args) => {_logger.WriteToLog("Process Exited");});
         }
 
         protected override void OnStop()

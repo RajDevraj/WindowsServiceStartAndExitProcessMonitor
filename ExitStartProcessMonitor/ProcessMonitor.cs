@@ -18,21 +18,6 @@ namespace ExitStartProcessMonitor
 
             _logger.WriteToLog($"Watching for {ProcessName}");
         }
-        
-        public void MonitorProcessStart(EventArrivedEventHandler handler)
-        {
-            /*https://stackoverflow.com/questions/6575117/how-to-wait-for-process-that-will-be-started*/
-            
-            var watcher = new ManagementEventWatcher(
-                new WqlEventQuery(
-                    "__InstanceCreationEvent",
-                    new TimeSpan(0, 0, 1),
-                    _eventQueryCondition));
-
-            watcher.Start();
-
-            watcher.EventArrived += handler;
-        }
 
         public void MonitorProcessExit(EventArrivedEventHandler handler)
         {
