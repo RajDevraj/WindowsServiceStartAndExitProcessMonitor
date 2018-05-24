@@ -16,7 +16,7 @@ namespace ExitStartProcessMonitor
         {
             _logger = logger ?? new WindowsEventLogger();
 
-            _logger.WriteToLog($"Watching for {ProcessName}");
+            _logger.WriteToLog($"Watching for {ProcessName} Exit");
         }
 
         public void MonitorProcessExit(EventArrivedEventHandler handler)
