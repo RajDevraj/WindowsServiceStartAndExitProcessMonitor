@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
 namespace ExitStartProcessMonitor
 {
     public class WindowsEventLogger
     {
         private readonly EventLog _eventLog;
-        private const string EventSourceName = "ExitStartProcessMonitor";
-        private const string EventLogName = "ExitStartProcessMonitor";
+        private const string EventSourceName = "ExitStartProcessMonitorSource";
+        private const string EventLogName = "ExitStartProcessMonitorLog";
 
         public WindowsEventLogger(EventLog eventLog = null)
         {

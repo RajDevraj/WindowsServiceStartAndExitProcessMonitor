@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Linq;
 using System.ServiceProcess;
 
 namespace ExitStartProcessMonitor
@@ -16,22 +15,15 @@ namespace ExitStartProcessMonitor
             _logger = logger ?? new WindowsEventLogger();
         }
 
-        protected override void OnStart(string[] args)
+        protected override void OnStart(string[] arguments)
         {
-            _processMonitor.MonitorProcessStart(EventHandler);
+            _processMonitor.MonitorProcessStart((sender, args) => _logger.WriteToLog("Process Started"));
+            _processMonitor.MonitorProcessExit((sender, args) => _logger.WriteToLog("Process Started"));
         }
 
         protected override void OnStop()
         {
             _logger.WriteToLog("Service closed");
-        }
-
-        private void EventHandler(object s, EventArgs a)
-        {
-            _processMonitor.MonitorProcessExit((sender, args) =>
-            {
-                _logger.WriteToLog("Process Exited");
-            });
         }
     }
 }
